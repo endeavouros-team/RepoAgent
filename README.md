@@ -1,2 +1,2 @@
 # RepoAgent
-RepoAgent checks the repo on the mirrors
+RepoAgent will check the repo on the mirrors
