@@ -6,7 +6,10 @@ from django.db import models
 
 class Mirror(models.Model):
     name = models.CharField(max_length=64)
-    url = models.CharField(max_length=256)
+    http_url = models.CharField(max_length=256, null=True, blank=True)
+    https_url = models.CharField(max_length=256, null=True, blank=True)
+    ftp_url = models.CharField(max_length=256, null=True, blank=True)
+    rsync_url = models.CharField(max_length=256, null=True, blank=True)
     sponsor_url = models.CharField(max_length=64, blank=True)
     authorized_ipv4 = models.GenericIPAddressField(blank=True, null=True)
     authorized_ipv6 = models.GenericIPAddressField(blank=True, null=True)
